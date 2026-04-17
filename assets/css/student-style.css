@@ -1,0 +1,141 @@
+/**
+ * ============================================================================
+ *  Project     : College ERP System
+ *  Author      : Vivek Kumar
+ *  LinkedIn    : https://www.linkedin.com/in/vivek-info
+ *  Instagram   : https://www.instagram.com/its.vivek.raj/
+ * ============================================================================
+ *  Copyright (c) 2026 Vivek Kumar. All Rights Reserved.
+ *  This code is the intellectual property of Vivek Kumar.
+ *  Unauthorized copying, distribution, or use of this project is strictly prohibited.
+ * ============================================================================
+ */
+/**
+ * Student Dashboard – Modern Blue Theme v5.0
+ * Extends base style.css with student‑specific palette
+ */
+
+/* ==================== Student Theme Variables ==================== */
+:root {
+    --primary-color: #3b82f6;
+    --primary-light: #60a5fa;
+    --primary-dark: #2563eb;
+    --primary-glow: rgba(59, 130, 246, .30);
+
+    --sidebar-bg: #0c1929;
+    --sidebar-item-hover: rgba(59, 130, 246, .08);
+    --sidebar-item-active-bg: linear-gradient(135deg, #3b82f6, #60a5fa);
+}
+
+/* ==================== Navbar ==================== */
+.top-navbar {
+    background: #0a1628 !important;
+    box-shadow: 0 2px 12px rgba(0,0,0,.3) !important;
+}
+
+/* ==================== Sidebar Brand ==================== */
+.sidebar-header {
+    background: linear-gradient(135deg, rgba(59,130,246,.12) 0%, rgba(59,130,246,.03) 100%) !important;
+}
+.brand-icon {
+    background: linear-gradient(135deg, #3b82f6, #60a5fa) !important;
+    box-shadow: 0 4px 12px rgba(59,130,246,.35) !important;
+}
+
+/* ==================== Nav Links ==================== */
+.nav-link::before { background: #60a5fa; }
+#sidebar .nav-link:hover { background: var(--sidebar-item-hover); color: #bfdbfe; }
+#sidebar .nav-link.active {
+    background: linear-gradient(135deg, #3b82f6, #60a5fa) !important;
+    color: white;
+    box-shadow: 0 4px 14px rgba(59,130,246,.35);
+}
+
+/* ==================== Dashboard Cards ==================== */
+.dashboard-card.bg-primary { background: linear-gradient(135deg, #3b82f6, #2563eb) !important; }
+.dashboard-card.bg-success { background: linear-gradient(135deg, #22c55e, #16a34a) !important; }
+.dashboard-card.bg-info    { background: linear-gradient(135deg, #60a5fa, #3b82f6) !important; }
+.dashboard-card.bg-warning { background: linear-gradient(135deg, #f59e0b, #d97706) !important; }
+
+/* ==================== Buttons ==================== */
+.btn-primary {
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    border: none; color: white;
+}
+.btn-primary:hover {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    box-shadow: 0 6px 18px rgba(59,130,246,.35);
+}
+.btn-outline-primary { color: #3b82f6; border-color: #3b82f6; }
+.btn-outline-primary:hover { background: #3b82f6; border-color: #3b82f6; color: white; }
+
+/* ==================== Badges ==================== */
+.badge.bg-primary { background-color: #3b82f6 !important; }
+
+/* ==================== Progress ==================== */
+.progress-bar { background: linear-gradient(90deg, #3b82f6, #60a5fa); }
+
+/* ==================== Tables ==================== */
+.table thead th {
+    background: linear-gradient(135deg, #3b82f6, #60a5fa);
+    color: white;
+}
+.table-hover tbody tr:hover { background-color: rgba(59,130,246,.04); }
+
+/* ==================== Cards ==================== */
+.card { border-left: 3px solid rgba(59,130,246,.4); }
+.card-header {
+    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+    color: #1e40af;
+}
+
+/* ==================== Alerts ==================== */
+.alert-success { background: rgba(34,197,94,.08); border-left-color: #22c55e; color: #15803d; }
+.alert-info    { background: rgba(59,130,246,.08); border-left-color: #3b82f6; color: #1e40af; }
+
+/* ==================== Forms ==================== */
+.form-control:focus, .form-select:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59,130,246,.2);
+}
+.form-check-input:checked { background-color: #3b82f6; border-color: #3b82f6; }
+
+/* ==================== Status Indicators ==================== */
+.status-present { background: rgba(34,197,94,.1); color: #16a34a; border-left: 3px solid #22c55e; }
+.status-absent  { background: rgba(239,68,68,.1); color: #dc2626; border-left: 3px solid #ef4444; }
+.status-leave   { background: rgba(245,158,11,.1); color: #d97706; border-left: 3px solid #f59e0b; }
+
+/* ==================== Modals ==================== */
+.modal-header { background: linear-gradient(135deg, #3b82f6, #60a5fa); color: white; }
+.modal-header .btn-close { filter: brightness(0) invert(1); }
+
+/* ==================== Dropdowns ==================== */
+.dropdown-item:hover { background: #eff6ff; color: #1e40af; }
+
+/* ==================== Links ==================== */
+a { color: #3b82f6; }
+a:hover { color: #2563eb; }
+
+/* ==================== Spinner ==================== */
+.spinner-border { color: #3b82f6; }
+
+/* ==================== Pagination ==================== */
+.page-link { color: #3b82f6; }
+.page-link:hover { color: #2563eb; background: #eff6ff; }
+.page-item.active .page-link { background: #3b82f6; border-color: #3b82f6; }
+
+/* ==================== List Group ==================== */
+.list-group-item.active { background: #3b82f6; border-color: #3b82f6; }
+.list-group-item:hover { background: #eff6ff; }
+
+/* ==================== Breadcrumb ==================== */
+.breadcrumb-item.active { color: #3b82f6; }
+
+/* ==================== Scrollbar ==================== */
+#sidebar::-webkit-scrollbar-thumb { background: rgba(59,130,246,.25); }
+#sidebar::-webkit-scrollbar-thumb:hover { background: rgba(59,130,246,.4); }
+
+/* ==================== Print ==================== */
+@media print {
+    .top-navbar { background: #3b82f6 !important; }
+}

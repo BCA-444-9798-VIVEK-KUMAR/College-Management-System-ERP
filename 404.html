@@ -1,0 +1,537 @@
+<!--
+ ============================================================================
+  Project     : College ERP System
+  Author      : Vivek Kumar
+  LinkedIn    : https://www.linkedin.com/in/vivek-info
+  Instagram   : https://www.instagram.com/its.vivek.raj/
+ ============================================================================
+  Copyright (c) 2026 Vivek Kumar. All Rights Reserved.
+  This code is the intellectual property of Vivek Kumar.
+  Unauthorized copying, distribution, or use of this project is strictly prohibited.
+ ============================================================================
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found | CIMAGE ERP</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+    <style>
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: #080b16;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* — Animated Mesh Background — */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background:
+                radial-gradient(ellipse 60% 50% at 20% 30%, rgba(99, 102, 241, .18) 0%, transparent 70%),
+                radial-gradient(ellipse 50% 55% at 80% 20%, rgba(236, 72, 153, .12) 0%, transparent 70%),
+                radial-gradient(ellipse 70% 60% at 50% 85%, rgba(56, 189, 248, .10) 0%, transparent 70%);
+            z-index: 0;
+            animation: meshShift 8s ease-in-out infinite alternate;
+        }
+
+        @keyframes meshShift {
+            0% {
+                transform: scale(1) translate(0, 0);
+            }
+
+            100% {
+                transform: scale(1.1) translate(-2%, 3%);
+            }
+        }
+
+        /* — Floating Particles — */
+        .particles {
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .particle {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0;
+            animation: float linear infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) scale(0);
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            90% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-10vh) scale(1);
+                opacity: 0;
+            }
+        }
+
+        /* — Grid Lines Background — */
+        .grid-bg {
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            background-image:
+                linear-gradient(rgba(99, 102, 241, .04) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(99, 102, 241, .04) 1px, transparent 1px);
+            background-size: 60px 60px;
+            animation: gridPan 20s linear infinite;
+        }
+
+        @keyframes gridPan {
+            0% {
+                transform: translate(0, 0);
+            }
+
+            100% {
+                transform: translate(60px, 60px);
+            }
+        }
+
+        /* — Glowing Orbs — */
+        .orb {
+            position: fixed;
+            border-radius: 50%;
+            filter: blur(80px);
+            z-index: 0;
+            animation: orbPulse 6s ease-in-out infinite alternate;
+        }
+
+        .orb-1 {
+            width: 400px;
+            height: 400px;
+            background: rgba(99, 102, 241, .15);
+            top: -10%;
+            left: -5%;
+            animation-delay: 0s;
+        }
+
+        .orb-2 {
+            width: 350px;
+            height: 350px;
+            background: rgba(236, 72, 153, .10);
+            bottom: -10%;
+            right: -5%;
+            animation-delay: 2s;
+        }
+
+        .orb-3 {
+            width: 250px;
+            height: 250px;
+            background: rgba(56, 189, 248, .10);
+            top: 50%;
+            left: 60%;
+            animation-delay: 4s;
+        }
+
+        @keyframes orbPulse {
+            0% {
+                transform: scale(1);
+                opacity: .5;
+            }
+
+            100% {
+                transform: scale(1.3);
+                opacity: .8;
+            }
+        }
+
+        /* — Main Content — */
+        .error-container {
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+            z-index: 10;
+            max-width: 640px;
+        }
+
+        /* — Glitch 404 — */
+        .error-code {
+            font-size: clamp(8rem, 20vw, 14rem);
+            font-weight: 900;
+            line-height: 1;
+            margin-bottom: 1rem;
+            position: relative;
+            background: linear-gradient(135deg, #6366f1, #ec4899, #38bdf8);
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradShift 4s ease infinite;
+            letter-spacing: -4px;
+        }
+
+        @keyframes gradShift {
+
+            0%,
+            100% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+
+        /* Glitch layers */
+        .error-code::before,
+        .error-code::after {
+            content: '404';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(135deg, #6366f1, #ec4899, #38bdf8);
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradShift 4s ease infinite;
+        }
+
+        .error-code::before {
+            animation: glitch1 3s infinite;
+            clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+        }
+
+        .error-code::after {
+            animation: glitch2 3s infinite;
+            clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+        }
+
+        @keyframes glitch1 {
+
+            0%,
+            93%,
+            100% {
+                transform: translate(0);
+            }
+
+            94% {
+                transform: translate(-8px, -2px);
+            }
+
+            95% {
+                transform: translate(6px, 1px);
+            }
+
+            96% {
+                transform: translate(-4px, 2px);
+            }
+        }
+
+        @keyframes glitch2 {
+
+            0%,
+            93%,
+            100% {
+                transform: translate(0);
+            }
+
+            94% {
+                transform: translate(8px, 2px);
+            }
+
+            95% {
+                transform: translate(-6px, -1px);
+            }
+
+            96% {
+                transform: translate(4px, -2px);
+            }
+        }
+
+        /* — Subtitle — */
+        .error-title {
+            font-size: clamp(1.4rem, 4vw, 2rem);
+            font-weight: 600;
+            margin-bottom: .75rem;
+            color: rgba(255, 255, 255, .9);
+            animation: fadeUp .8s ease .3s both;
+        }
+
+        .error-message {
+            font-size: clamp(.95rem, 2.5vw, 1.15rem);
+            margin-bottom: 2.5rem;
+            color: rgba(255, 255, 255, .5);
+            line-height: 1.6;
+            font-weight: 300;
+            animation: fadeUp .8s ease .5s both;
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* — Scan Line — */
+        .scan-line {
+            position: absolute;
+            width: 120%;
+            left: -10%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, rgba(99, 102, 241, .6), rgba(236, 72, 153, .4), transparent);
+            animation: scan 4s ease-in-out infinite;
+            z-index: 5;
+            box-shadow: 0 0 20px rgba(99, 102, 241, .3);
+        }
+
+        @keyframes scan {
+
+            0%,
+            100% {
+                top: -5%;
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            90% {
+                opacity: 1;
+            }
+
+            100% {
+                top: 105%;
+                opacity: 0;
+            }
+        }
+
+        /* — CTA Button — */
+        .btn-home {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 40px;
+            border-radius: 50px;
+            font-size: 1.05rem;
+            font-weight: 700;
+            font-family: 'Outfit', sans-serif;
+            text-decoration: none;
+            color: white;
+            background: linear-gradient(135deg, #6366f1, #4f46e5);
+            box-shadow: 0 8px 28px rgba(99, 102, 241, .4);
+            transition: all .35s ease;
+            position: relative;
+            overflow: hidden;
+            border: none;
+            cursor: pointer;
+            animation: fadeUp .8s ease .7s both;
+        }
+
+        .btn-home::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -75%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .2), transparent);
+            transform: skewX(-20deg);
+            animation: btnShimmer 3s ease-in-out infinite;
+        }
+
+        @keyframes btnShimmer {
+            0% {
+                left: -75%;
+            }
+
+            100% {
+                left: 125%;
+            }
+        }
+
+        .btn-home:hover {
+            transform: translateY(-4px) scale(1.03);
+            box-shadow: 0 14px 40px rgba(99, 102, 241, .55);
+        }
+
+        .btn-home:active {
+            transform: translateY(-1px) scale(1);
+        }
+
+        /* — Secondary Link — */
+        .link-back {
+            display: inline-block;
+            margin-top: 1rem;
+            color: rgba(255, 255, 255, .4);
+            font-size: .9rem;
+            text-decoration: none;
+            transition: color .25s;
+            animation: fadeUp .8s ease .9s both;
+        }
+
+        .link-back:hover {
+            color: #818cf8;
+        }
+
+        /* — Status Badge — */
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: .75rem;
+            font-weight: 600;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+            background: rgba(239, 68, 68, .12);
+            color: #f87171;
+            border: 1px solid rgba(239, 68, 68, .2);
+            margin-bottom: 2rem;
+            animation: fadeUp .8s ease .1s both;
+        }
+
+        .status-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #f87171;
+            animation: blink 1.5s ease infinite;
+        }
+
+        @keyframes blink {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: .3;
+            }
+        }
+
+        /* — Responsive — */
+        @media (max-width: 576px) {
+            .error-container {
+                padding: 1.5rem;
+            }
+
+            .error-code {
+                letter-spacing: -2px;
+            }
+
+            .btn-home {
+                padding: 14px 32px;
+                font-size: .95rem;
+            }
+
+            .orb {
+                filter: blur(60px);
+            }
+
+            .orb-1 {
+                width: 250px;
+                height: 250px;
+            }
+
+            .orb-2 {
+                width: 200px;
+                height: 200px;
+            }
+
+            .orb-3 {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Background Effects -->
+    <div class="grid-bg"></div>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div class="particles" id="particles"></div>
+
+    <!-- Main Content -->
+    <div class="error-container">
+        <div class="scan-line"></div>
+
+        <div class="status-badge">
+            <span class="status-dot"></span>
+            Error 404
+        </div>
+
+        <div class="error-code">404</div>
+
+        <h2 class="error-title">Lost in the Matrix</h2>
+        <p class="error-message">
+            The page you're searching for has drifted into the void.<br>
+            It may have been moved, deleted, or never existed.
+        </p>
+
+        <a href="/" class="btn-home">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                <polyline points="9 22 9 12 15 12 15 22" />
+            </svg>
+            Back to Home
+        </a>
+        <br>
+        <a href="javascript:history.back()" class="link-back">← or go to previous page</a>
+    </div>
+
+    <script>
+        // Generate floating particles
+        const container = document.getElementById('particles');
+        const colors = ['rgba(99,102,241,.5)', 'rgba(236,72,153,.4)', 'rgba(56,189,248,.4)', 'rgba(129,140,248,.3)'];
+
+        for (let i = 0; i < 30; i++) {
+            const p = document.createElement('div');
+            p.className = 'particle';
+            const size = Math.random() * 4 + 2;
+            p.style.cssText = `
+                width: ${size}px; height: ${size}px;
+                left: ${Math.random() * 100}%;
+                background: ${colors[Math.floor(Math.random() * colors.length)]};
+                animation-duration: ${Math.random() * 8 + 6}s;
+                animation-delay: ${Math.random() * 6}s;
+            `;
+            container.appendChild(p);
+        }
+    </script>
+</body>
+
+</html>
