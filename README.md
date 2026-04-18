@@ -6,7 +6,7 @@ No commercial use, distribution, or modification permitted without written conse
 # 🎓College ERP - College Management System
 Portal Link -> https://college-erp.free.nf
 
-A comprehensive web-based College Management System with attendance tracking, online examinations, admit card generation, email notifications and report generation(PDF/CSV).
+A comprehensive web-based College Management System with attendance tracking, online examinations, admit card generation, automated email notifications and report generation(PDF/CSV).
 
 ![PHP](https://img.shields.io/badge/PHP-7.4+-777BB4?style=flat&logo=php&logoColor=white)
 ![MySQL](https://img.shields.io/badge/MySQL-8.0+-4479A1?style=flat&logo=mysql&logoColor=white)
