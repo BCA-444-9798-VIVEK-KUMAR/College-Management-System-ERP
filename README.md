@@ -10,6 +10,11 @@ A comprehensive web-based College Management System with attendance tracking, on
 
 ![PHP](https://img.shields.io/badge/PHP-7.4+-777BB4?style=flat&logo=php&logoColor=white)
 ![MySQL](https://img.shields.io/badge/MySQL-8.0+-4479A1?style=flat&logo=mysql&logoColor=white)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=flat&logo=javascript&logoColor=black)
+![AJAX](https://img.shields.io/badge/AJAX-Asynchronous-005C84?style=flat&logo=jquery&logoColor=white)
+![REST API](https://img.shields.io/badge/REST_API-v1.0-009688?style=flat&logo=jsonwebtokens&logoColor=white)
 ![Bootstrap](https://img.shields.io/badge/Bootstrap-5.3-7952B3?style=flat&logo=bootstrap&logoColor=white)
 ![License](https://img.shields.io/badge/License-Proprietary-red)
 
